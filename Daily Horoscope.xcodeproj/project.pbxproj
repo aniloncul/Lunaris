@@ -12,6 +12,9 @@
 		8B6BF1352A4061FA00F6E282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6BF1342A4061FA00F6E282 /* Assets.xcassets */; };
 		8B6BF1382A4061FA00F6E282 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6BF1372A4061FA00F6E282 /* Preview Assets.xcassets */; };
 		8B6BF13A2A4061FA00F6E282 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BF1392A4061FA00F6E282 /* Item.swift */; };
+		8B6BF1432A40620E00F6E282 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BF1422A40620E00F6E282 /* Keys.swift */; };
+		8B6BF1452A40660500F6E282 /* StarsignPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BF1442A40660500F6E282 /* StarsignPickerView.swift */; };
+		8B6BF1472A406C3200F6E282 /* HoroscopeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BF1462A406C3200F6E282 /* HoroscopeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		8B6BF1392A4061FA00F6E282 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8B6BF13B2A4061FA00F6E282 /* Daily_Horoscope.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Daily_Horoscope.entitlements; sourceTree = "<group>"; };
 		8B6BF13C2A4061FA00F6E282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B6BF1422A40620E00F6E282 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		8B6BF1442A40660500F6E282 /* StarsignPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsignPickerView.swift; sourceTree = "<group>"; };
+		8B6BF1462A406C3200F6E282 /* HoroscopeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 				8B6BF13B2A4061FA00F6E282 /* Daily_Horoscope.entitlements */,
 				8B6BF13C2A4061FA00F6E282 /* Info.plist */,
 				8B6BF1362A4061FA00F6E282 /* Preview Content */,
+				8B6BF1422A40620E00F6E282 /* Keys.swift */,
+				8B6BF1442A40660500F6E282 /* StarsignPickerView.swift */,
+				8B6BF1462A406C3200F6E282 /* HoroscopeViewModel.swift */,
 			);
 			path = "Daily Horoscope";
 			sourceTree = "<group>";
@@ -145,8 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B6BF1332A4061F900F6E282 /* ContentView.swift in Sources */,
+				8B6BF1432A40620E00F6E282 /* Keys.swift in Sources */,
 				8B6BF13A2A4061FA00F6E282 /* Item.swift in Sources */,
+				8B6BF1472A406C3200F6E282 /* HoroscopeViewModel.swift in Sources */,
 				8B6BF1312A4061F900F6E282 /* Daily_HoroscopeApp.swift in Sources */,
+				8B6BF1452A40660500F6E282 /* StarsignPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

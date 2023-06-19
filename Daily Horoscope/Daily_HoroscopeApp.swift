@@ -18,3 +18,4 @@ struct Daily_HoroscopeApp: App {
         .modelContainer(for: Item.self)
     }
 }
+
