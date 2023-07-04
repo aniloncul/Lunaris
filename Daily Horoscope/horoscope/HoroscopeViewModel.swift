@@ -15,9 +15,12 @@ class HoroscopeViewModel {
     var isLoading = false
     var currentHoroscopeText: String = "this is me example text of a daily horoscope this is some example text of a daily horoscope this is some example text of a daily some example text of a daily horoscope this is some example text of a daily horoscope this is some example text of a daily horoscope this is some example text of a daily horoscope this is some example text of a daily horoscope"
 
-    func getHoroscope(for sign: Starsign) async {
+    func getHoroscope(for sign: Starsign, tone: GPTTone) async {
         isLoading = true
-        let prompt = "Give me a single short concise paragraph with fewer than 100 words of a daily horoscope for the star sign: \(sign.rawValue)"
+
+        let starsign = UserDefaults.standard.string(forKey: "starsign")!
+
+        let prompt = "If I am a \(starsign), pretend you are a fortune teller, please generate my horoscope for today with a \(tone.rawValue) tone. Please try to limit it 250 words"
         let chatGPTURL = URL(string: "https://api.openai.com/v1/chat/completions")!
         var request = URLRequest(url: chatGPTURL)
         request.httpMethod = "POST"
@@ -25,7 +28,7 @@ class HoroscopeViewModel {
         request.addValue("Bearer \(Keys.gpt4)", forHTTPHeaderField: "Authorization")
 
         let message = GPTMessage(role: "user", content: prompt)
-        let gptBody = GPTBody(model: "gpt-4-0613", messages: [message], max_tokens: 500, stop: ["\n"])
+        let gptBody = GPTBody(model: "gpt-4-0613", messages: [message], max_tokens: 500, stop: ["&&"])
 
         do {
             request.httpBody = try JSONEncoder().encode(gptBody)

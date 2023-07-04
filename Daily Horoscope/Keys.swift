@@ -9,6 +9,6 @@ import Foundation
 
 struct Keys {
 
-    static let gpt4 = "YOU KEY HERE"
+    static let gpt4 = "YOUKEYHERE"
 
 }
