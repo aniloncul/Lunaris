@@ -18,6 +18,10 @@ enum Starsign: String, CaseIterable, Identifiable {
         return self.rawValue
     }
 
+    var symbol: String {
+        return self.rawValue
+    }
+
     static func getZodiacSign(_ date: Date) -> Starsign {
         let calendar = Calendar.current
         let d = calendar.component(.day, from: date)

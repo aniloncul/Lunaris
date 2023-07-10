@@ -13,9 +13,9 @@ struct Daily_HoroscopeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            DailyHoroscopeView()
+            DashboardView()
         }
-        .modelContainer(for: Item.self)
+//        .modelContainer(for: Item.self)
     }
 }
 

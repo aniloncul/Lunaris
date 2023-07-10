@@ -11,7 +11,6 @@ import SpriteKit
 
 struct OnboardingView: View {
 
-    let didFinishPicking: ((Starsign) -> Void)
     @State var selectedDate: Date = .now
     @AppStorage("starsign") var starsign: Starsign?
     @AppStorage("dob") var dob: Double?
@@ -90,7 +89,5 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView { starsign in
-        
-    }
+    OnboardingView()
 }

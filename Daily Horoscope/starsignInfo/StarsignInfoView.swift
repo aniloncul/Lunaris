@@ -9,6 +9,15 @@ import Foundation
 import SwiftUI
 import SpriteKit
 
+#warning("Create shaders")
+#warning("Affirmation Widget")
+#warning("A new API call to Chat GPT for affirmations. New ViewModel.")
+#warning("Date on dashboard")
+#warning("Current planet influences on dashboard.")
+#warning("Moon phases on dashboard")
+
+// TODO: something
+
 class ParticleScene: SKScene {
 
     override init(size: CGSize) {
@@ -97,6 +106,9 @@ struct StarsignView: View {
 
     var body: some View {
         VStack {
+            Image(starsign.constellation)
+                .resizable()
+                .scaledToFit()
             Spacer()
             Text(starsign.rawValue)
                 .font(.largeTitle)
