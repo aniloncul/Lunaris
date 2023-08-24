@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SwiftData
+//import SwiftData
 
 //struct ContentView: View {
 //    @Environment(\.modelContext) private var modelContext
