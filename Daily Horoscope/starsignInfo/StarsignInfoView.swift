@@ -32,7 +32,6 @@ struct StarsignInfoView: View {
                 .offset(x: 200 + offset * 0.01, y: 0)
                 .layoutPriority(-1)
                 .opacity(0.3)
-                .rotation3DEffect(.degrees((-UIScreen.main.bounds.width * 6 - offset) / CGFloat(-500)) , axis: (x: 0.0, y: 1.0, z: 0.0))
 
             Image(.starfield)
                 .rotationEffect(.degrees(90))
@@ -43,8 +42,8 @@ struct StarsignInfoView: View {
             SpriteView(scene: scene, options: [.allowsTransparency])
 
             SpriteView(scene: gasCloudScene, options: [.allowsTransparency])
-                .frame(width: 1800, height: 800)
-                .offset(x: 500 + offset * 0.2, y: 0)
+                .frame(width: 2000, height: 800)
+                .offset(x: 400 + offset * 0.2, y: 0)
                 .layoutPriority(-1)
 
             ScrollView(.horizontal, showsIndicators: false) {
