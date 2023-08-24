@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B13E0452A97B47800673F37 /* StarsignParticleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13E0442A97B47800673F37 /* StarsignParticleScene.swift */; };
 		8B5F2C112A5C149200C7F8D9 /* DailyAffirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F2C102A5C149200C7F8D9 /* DailyAffirmationView.swift */; };
 		8B5F2C132A5C242400C7F8D9 /* DashboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F2C122A5C242400C7F8D9 /* DashboardRow.swift */; };
 		8B6BF1312A4061F900F6E282 /* Daily_HoroscopeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BF1302A4061F900F6E282 /* Daily_HoroscopeApp.swift */; };
@@ -20,6 +21,7 @@
 		8B82F0CF2A5430C100F23BD3 /* ScaleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82F0CE2A5430C100F23BD3 /* ScaleButtonStyle.swift */; };
 		8B82F0D12A5430DA00F23BD3 /* GPTTone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82F0D02A5430DA00F23BD3 /* GPTTone.swift */; };
 		8B82F0D42A54373A00F23BD3 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82F0D32A54373A00F23BD3 /* DashboardView.swift */; };
+		8B8AFAC82A97B3B9005F27C9 /* DashboardTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8AFAC72A97B3B9005F27C9 /* DashboardTile.swift */; };
 		8BA3A9B52A4AEC8F00E82987 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3A9B42A4AEC8F00E82987 /* OnboardingView.swift */; };
 		8BA3A9B72A4AEF4400E82987 /* Starsign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3A9B62A4AEF4400E82987 /* Starsign.swift */; };
 		8BA3A9BA2A4B04C500E82987 /* StarsignInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3A9B92A4B04C500E82987 /* StarsignInfoView.swift */; };
@@ -28,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B13E0442A97B47800673F37 /* StarsignParticleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsignParticleScene.swift; sourceTree = "<group>"; };
 		8B5F2C102A5C149200C7F8D9 /* DailyAffirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAffirmationView.swift; sourceTree = "<group>"; };
 		8B5F2C122A5C242400C7F8D9 /* DashboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRow.swift; sourceTree = "<group>"; };
 		8B6BF12D2A4061F900F6E282 /* Daily Horoscope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Horoscope.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,7 @@
 		8B82F0CE2A5430C100F23BD3 /* ScaleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleButtonStyle.swift; sourceTree = "<group>"; };
 		8B82F0D02A5430DA00F23BD3 /* GPTTone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTTone.swift; sourceTree = "<group>"; };
 		8B82F0D32A54373A00F23BD3 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		8B8AFAC72A97B3B9005F27C9 /* DashboardTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTile.swift; sourceTree = "<group>"; };
 		8BA3A9B42A4AEC8F00E82987 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8BA3A9B62A4AEF4400E82987 /* Starsign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starsign.swift; sourceTree = "<group>"; };
 		8BA3A9B92A4B04C500E82987 /* StarsignInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsignInfoView.swift; sourceTree = "<group>"; };
@@ -62,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B13E0432A97B46400673F37 /* particles */ = {
+			isa = PBXGroup;
+			children = (
+				8B13E0442A97B47800673F37 /* StarsignParticleScene.swift */,
+			);
+			path = particles;
+			sourceTree = "<group>";
+		};
 		8B5F2C0F2A5C147F00C7F8D9 /* dailyAffirmation */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,20 +101,21 @@
 		8B6BF12F2A4061F900F6E282 /* Daily Horoscope */ = {
 			isa = PBXGroup;
 			children = (
+				8B6BF1302A4061F900F6E282 /* Daily_HoroscopeApp.swift */,
 				8B6BF1322A4061F900F6E282 /* ContentView.swift */,
+				8BA3A9B62A4AEF4400E82987 /* Starsign.swift */,
+				8B6BF1422A40620E00F6E282 /* Keys.swift */,
+				8B13E0432A97B46400673F37 /* particles */,
 				8B82F0D22A54372F00F23BD3 /* dashboard */,
 				8B5F2C0F2A5C147F00C7F8D9 /* dailyAffirmation */,
 				8B82F0CD2A5430B300F23BD3 /* modifiers */,
 				8BA3A9B82A4B049B00E82987 /* starsignInfo */,
 				8BA3A9B32A4AEC7D00E82987 /* onboarding */,
 				8BA3A9B22A4AEC6100E82987 /* horoscope */,
-				8B6BF1302A4061F900F6E282 /* Daily_HoroscopeApp.swift */,
 				8B6BF1342A4061FA00F6E282 /* Assets.xcassets */,
 				8B6BF13B2A4061FA00F6E282 /* Daily_Horoscope.entitlements */,
 				8B6BF13C2A4061FA00F6E282 /* Info.plist */,
 				8B6BF1362A4061FA00F6E282 /* Preview Content */,
-				8B6BF1422A40620E00F6E282 /* Keys.swift */,
-				8BA3A9B62A4AEF4400E82987 /* Starsign.swift */,
 			);
 			path = "Daily Horoscope";
 			sourceTree = "<group>";
@@ -128,6 +141,7 @@
 			children = (
 				8B82F0D32A54373A00F23BD3 /* DashboardView.swift */,
 				8B5F2C122A5C242400C7F8D9 /* DashboardRow.swift */,
+				8B8AFAC72A97B3B9005F27C9 /* DashboardTile.swift */,
 			);
 			path = dashboard;
 			sourceTree = "<group>";
@@ -236,9 +250,11 @@
 				8B6BF1332A4061F900F6E282 /* ContentView.swift in Sources */,
 				8B82F0D42A54373A00F23BD3 /* DashboardView.swift in Sources */,
 				8B6BF1432A40620E00F6E282 /* Keys.swift in Sources */,
+				8B13E0452A97B47800673F37 /* StarsignParticleScene.swift in Sources */,
 				8BA3A9BA2A4B04C500E82987 /* StarsignInfoView.swift in Sources */,
 				8B6BF13A2A4061FA00F6E282 /* Item.swift in Sources */,
 				8B6BF1472A406C3200F6E282 /* HoroscopeViewModel.swift in Sources */,
+				8B8AFAC82A97B3B9005F27C9 /* DashboardTile.swift in Sources */,
 				8BA3A9B72A4AEF4400E82987 /* Starsign.swift in Sources */,
 				8B82F0CF2A5430C100F23BD3 /* ScaleButtonStyle.swift in Sources */,
 				8B6BF1312A4061F900F6E282 /* Daily_HoroscopeApp.swift in Sources */,

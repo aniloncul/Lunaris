@@ -9,27 +9,6 @@ import Foundation
 import SwiftUI
 import StoreKit
 
-struct DashboardTile: View {
-
-    let title: String
-    let systemName: String
-
-    var body: some View {
-        VStack(spacing: 20) {
-            Image(systemName: systemName)
-                .padding(.horizontal)
-                .font(.largeTitle)
-            Text(title)
-                .padding(.horizontal)
-                .frame(maxWidth: .infinity)
-        }
-        .padding()
-        .background(RoundedRectangle(cornerRadius: 15).visualEffect({ effect, proxy in
-            effect.blur(radius: 0.5).opacity(0.2)
-        }))
-    }
-}
-
 struct DashboardView: View {
 
     @AppStorage("starsign") var starsign: Starsign?

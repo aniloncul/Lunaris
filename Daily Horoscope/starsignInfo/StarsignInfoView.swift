@@ -16,25 +16,6 @@ import SpriteKit
 #warning("Current planet influences on dashboard.")
 #warning("Moon phases on dashboard")
 
-// TODO: something
-
-class ParticleScene: SKScene {
-
-    override init(size: CGSize) {
-        super.init(size: size)
-        let particleEmitter = SKEmitterNode(fileNamed: "Bokeh")!
-        particleEmitter.position.y = size.height / 2
-        particleEmitter.position.x = size.width / 2
-        addChild(particleEmitter)
-        backgroundColor = .clear
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-}
-
 struct StarsignInfoView: View {
 
     @State private var offset: CGFloat = 0
@@ -46,18 +27,18 @@ struct StarsignInfoView: View {
                 .offset(x: 200 + offset * 0.06, y: 0)
                 .layoutPriority(-1)
 
-            Image(.starfield)
-                .rotationEffect(.degrees(90))
-                .offset(x: offset * 0.02, y: 0)
-                .layoutPriority(-1)
+//            Image(.starfield)
+//                .rotationEffect(.degrees(90))
+//                .offset(x: offset * 0.02, y: 0)
+//                .layoutPriority(-1)
+//
+//            Image(.starfield)
+//                .rotationEffect(.degrees(180))
+//                .offset(x: offset * 0.1, y: 0)
+//                .layoutPriority(-1)
 
-            Image(.starfield)
-                .rotationEffect(.degrees(180))
-                .offset(x: offset * 0.1, y: 0)
-                .layoutPriority(-1)
-
-            SpriteView(scene: scene, options: [.allowsTransparency])
-                .offset(x: offset * 0.02, y: 0)
+//            SpriteView(scene: scene, options: [.allowsTransparency])
+//                .offset(x: offset * 0.02, y: 0)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
@@ -106,14 +87,20 @@ struct StarsignView: View {
 
     var body: some View {
         VStack {
+            Spacer()
             Image(starsign.constellation)
                 .resizable()
                 .scaledToFit()
+                .frame(maxWidth: 300, maxHeight: 300)
+                .padding()
+                .shadow(color: .white, radius: 20, x: 0, y: 0)
             Spacer()
-            Text(starsign.rawValue)
-                .font(.largeTitle)
+            Text(starsign.rawValue.capitalized)
+                .font(.custom("GillSans", size: 45))
                 .frame(maxWidth: .infinity)
+                .padding(.bottom)
         }
+        .shadow(color: .white, radius: 10, x: 0, y: 0)
     }
 }
 
