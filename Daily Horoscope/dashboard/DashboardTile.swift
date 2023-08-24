@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DashboardTileView: View {
+struct DashboardTile: View {
 
     let title: String
     let systemName: String
