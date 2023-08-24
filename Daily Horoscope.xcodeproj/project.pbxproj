@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B13E0452A97B47800673F37 /* StarsignParticleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13E0442A97B47800673F37 /* StarsignParticleScene.swift */; };
+		8B13E0452A97B47800673F37 /* MeteorParticleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13E0442A97B47800673F37 /* MeteorParticleScene.swift */; };
+		8B13E0472A97CFB100673F37 /* GasCloudParticleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B13E0462A97CFB100673F37 /* GasCloudParticleScene.swift */; };
+		8B13E0492A97CFDA00673F37 /* GasCloud.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8B13E0482A97CFDA00673F37 /* GasCloud.sks */; };
 		8B5F2C112A5C149200C7F8D9 /* DailyAffirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F2C102A5C149200C7F8D9 /* DailyAffirmationView.swift */; };
 		8B5F2C132A5C242400C7F8D9 /* DashboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F2C122A5C242400C7F8D9 /* DashboardRow.swift */; };
 		8B6BF1312A4061F900F6E282 /* Daily_HoroscopeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BF1302A4061F900F6E282 /* Daily_HoroscopeApp.swift */; };
@@ -25,12 +27,14 @@
 		8BA3A9B52A4AEC8F00E82987 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3A9B42A4AEC8F00E82987 /* OnboardingView.swift */; };
 		8BA3A9B72A4AEF4400E82987 /* Starsign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3A9B62A4AEF4400E82987 /* Starsign.swift */; };
 		8BA3A9BA2A4B04C500E82987 /* StarsignInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3A9B92A4B04C500E82987 /* StarsignInfoView.swift */; };
-		8BA3A9BF2A4B142300E82987 /* Bokeh.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BA3A9BD2A4B142300E82987 /* Bokeh.sks */; };
+		8BA3A9BF2A4B142300E82987 /* Meteor.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BA3A9BD2A4B142300E82987 /* Meteor.sks */; };
 		8BA3A9C02A4B142300E82987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BA3A9BE2A4B142300E82987 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B13E0442A97B47800673F37 /* StarsignParticleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsignParticleScene.swift; sourceTree = "<group>"; };
+		8B13E0442A97B47800673F37 /* MeteorParticleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorParticleScene.swift; sourceTree = "<group>"; };
+		8B13E0462A97CFB100673F37 /* GasCloudParticleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasCloudParticleScene.swift; sourceTree = "<group>"; };
+		8B13E0482A97CFDA00673F37 /* GasCloud.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GasCloud.sks; sourceTree = "<group>"; };
 		8B5F2C102A5C149200C7F8D9 /* DailyAffirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAffirmationView.swift; sourceTree = "<group>"; };
 		8B5F2C122A5C242400C7F8D9 /* DashboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRow.swift; sourceTree = "<group>"; };
 		8B6BF12D2A4061F900F6E282 /* Daily Horoscope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Horoscope.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +55,7 @@
 		8BA3A9B42A4AEC8F00E82987 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8BA3A9B62A4AEF4400E82987 /* Starsign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starsign.swift; sourceTree = "<group>"; };
 		8BA3A9B92A4B04C500E82987 /* StarsignInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsignInfoView.swift; sourceTree = "<group>"; };
-		8BA3A9BD2A4B142300E82987 /* Bokeh.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bokeh.sks; sourceTree = "<group>"; };
+		8BA3A9BD2A4B142300E82987 /* Meteor.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Meteor.sks; sourceTree = "<group>"; };
 		8BA3A9BE2A4B142300E82987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +73,11 @@
 		8B13E0432A97B46400673F37 /* particles */ = {
 			isa = PBXGroup;
 			children = (
-				8B13E0442A97B47800673F37 /* StarsignParticleScene.swift */,
+				8B13E0442A97B47800673F37 /* MeteorParticleScene.swift */,
+				8BA3A9BD2A4B142300E82987 /* Meteor.sks */,
+				8BA3A9BE2A4B142300E82987 /* Assets.xcassets */,
+				8B13E0462A97CFB100673F37 /* GasCloudParticleScene.swift */,
+				8B13E0482A97CFDA00673F37 /* GasCloud.sks */,
 			);
 			path = particles;
 			sourceTree = "<group>";
@@ -169,8 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				8BA3A9B92A4B04C500E82987 /* StarsignInfoView.swift */,
-				8BA3A9BD2A4B142300E82987 /* Bokeh.sks */,
-				8BA3A9BE2A4B142300E82987 /* Assets.xcassets */,
 			);
 			path = starsignInfo;
 			sourceTree = "<group>";
@@ -234,7 +240,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B6BF1382A4061FA00F6E282 /* Preview Assets.xcassets in Resources */,
-				8BA3A9BF2A4B142300E82987 /* Bokeh.sks in Resources */,
+				8B13E0492A97CFDA00673F37 /* GasCloud.sks in Resources */,
+				8BA3A9BF2A4B142300E82987 /* Meteor.sks in Resources */,
 				8B6BF1352A4061FA00F6E282 /* Assets.xcassets in Resources */,
 				8BA3A9C02A4B142300E82987 /* Assets.xcassets in Resources */,
 			);
@@ -250,13 +257,14 @@
 				8B6BF1332A4061F900F6E282 /* ContentView.swift in Sources */,
 				8B82F0D42A54373A00F23BD3 /* DashboardView.swift in Sources */,
 				8B6BF1432A40620E00F6E282 /* Keys.swift in Sources */,
-				8B13E0452A97B47800673F37 /* StarsignParticleScene.swift in Sources */,
+				8B13E0452A97B47800673F37 /* MeteorParticleScene.swift in Sources */,
 				8BA3A9BA2A4B04C500E82987 /* StarsignInfoView.swift in Sources */,
 				8B6BF13A2A4061FA00F6E282 /* Item.swift in Sources */,
 				8B6BF1472A406C3200F6E282 /* HoroscopeViewModel.swift in Sources */,
 				8B8AFAC82A97B3B9005F27C9 /* DashboardTile.swift in Sources */,
 				8BA3A9B72A4AEF4400E82987 /* Starsign.swift in Sources */,
 				8B82F0CF2A5430C100F23BD3 /* ScaleButtonStyle.swift in Sources */,
+				8B13E0472A97CFB100673F37 /* GasCloudParticleScene.swift in Sources */,
 				8B6BF1312A4061F900F6E282 /* Daily_HoroscopeApp.swift in Sources */,
 				8B6BF1452A40660500F6E282 /* DailyHoroscopeView.swift in Sources */,
 				8B82F0D12A5430DA00F23BD3 /* GPTTone.swift in Sources */,

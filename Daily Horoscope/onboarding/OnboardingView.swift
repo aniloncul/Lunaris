@@ -16,7 +16,7 @@ struct OnboardingView: View {
     @AppStorage("dob") var dob: Double?
     @AppStorage("tone") var tone: GPTTone = .chill
     @Environment(\.dismiss) var dismiss
-    private let scene = ParticleScene(size: UIScreen.main.bounds.size)
+    private let scene = MeteorParticleScene(size: UIScreen.main.bounds.size)
 
     var body: some View {
 
