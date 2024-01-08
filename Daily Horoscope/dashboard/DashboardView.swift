@@ -16,60 +16,120 @@ struct DashboardView: View {
     @State var showDailyHoroscope: Bool = false
     @State var showOnboarding: Bool = false
     @State var showStarsignInfo: Bool = false
+    @State var currentDate: Date = Date()
+    
+    
 
     var body: some View {
+        
         NavigationStack {
-            ZStack {
-                VStack {
-                    Image(starsign?.constellation ?? "")
-                        .resizable()
-                        .scaledToFit()
-                        .offset(y: -100)
-                    Spacer()
-                }
-                ScrollView(showsIndicators: false) {
-                    Spacer()
-                        .frame(height: 200)
-
-                    NavigationLink(destination: DailyAffirmationView()) {
-                        DashboardRow(title: "Daily Affirmation", subtitle: "Know what you should focus on!")
-                    }
-                    .buttonStyle(.plain)
-                    .padding(.horizontal)
-
-                    NavigationLink(destination: DailyHoroscopeView()) {
-                        DashboardRow(title: "Daily Horoscope", subtitle: "See what's on for today!")
-                    }
-                    .buttonStyle(.plain)
-                    .padding(.horizontal)
-
-                    LazyHGrid(rows: [.init(.adaptive(minimum: 100, maximum: 300))]) {
+            VStack {
+               VStack {
+                  
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text(formatDate(currentDate))
+                            .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+                            .multilineTextAlignment(.leading)
+                            .font(
+                                .system(size: 40,
+                                        weight: .thin
+                                       )
+                            )
+                        
+                        
+                        Text("In the halls of zodiac academy, Destiny is written in the stars.")
+                            .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+                            .multilineTextAlignment(.leading)
+                            .italic()
+                        
+                        Spacer()
+                            .frame(height: 8)
+                        
                         Button(action: {
                             showStarsignInfo = true
                         }, label: {
-                            DashboardTile(title: "Zodiac", systemName: "sparkles")
+                            DashboardTile(title: "Daily Horoscope", systemName: "sparkles")
                         })
-
-                        Button(action: {
-                            showPaywall = true
-                        }, label: {
-                            DashboardTile(title: "Purchases", systemName: "dollarsign")
-                        })
+                        .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+                        
+                        Spacer()
+                            .frame(height: 2)
+                        
+                        Text("Star News")
+                            .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+                            .multilineTextAlignment(.leading)
+                            .font(
+                                .system(size: 24,
+                                        weight: .light
+                                       )
+                            )
+                        ScrollView {
+                            VStack(spacing: 48){
+                                DashboardNewsView()
+                                    .frame(alignment: .center)
+                                    .padding(.leading, 14)
+                                
+                                DashboardNewsView()
+                                    .frame(alignment: .center)
+                                    .padding(.leading, 14)
+                                
+                                DashboardNewsView()
+                                    .frame(alignment: .center)
+                                    .padding(.leading, 14)
+                            }
+                        }
+                         
+                    }
+                 }
+            }
+           
+            .toolbar {
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    HStack {
+                        Button {
+                            showOnboarding = true
+                        } label: {
+                            Image(systemName: "bell.circle.fill")
+                                .resizable()
+                                .frame(width:36, height:36)
+                        }
+                        Spacer()
+                            .frame(width:0
+                            )
                     }
                 }
-            }
-            .navigationTitle(Text("Dashboard"))
-            .toolbar {
+                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showOnboarding = true
                     } label: {
-                        Image(systemName: "moon.dust.circle.fill")
+                        Image(systemName: "gearshape.circle.fill")
+                            .resizable()
+                            .frame(width:36, height:36)
+                    }
+                }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    HStack {
+                        Button {
+                            showOnboarding = true
+                        } label: {
+                            Image(systemName: "moon.dust.circle.fill")
+                                .resizable()
+                                .frame(width:36, height:36)
+                            
+                        }
+                        Spacer()
+                            .frame(width: 24)
                     }
                 }
             }
+            .padding([.bottom, .top], 32)
             .background(
-                LinearGradient(colors: [.init(red: 0, green: 0, blue: 0.3), .init(red: 0.2, green: 0, blue: 0.3)], startPoint: .top, endPoint: .bottom)
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
             )
             .sheet(isPresented: $showPaywall) {
                 StoreView(ids: ["PremiumMonthly", "PremiumQuarterly"])
@@ -86,6 +146,11 @@ struct DashboardView: View {
             showOnboarding = starsign == nil
         }
     }
+    private func formatDate(_ date: Date) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMM d, yyyy" // You can customize the format as needed
+            return formatter.string(from: date)
+        }
 
 }
 

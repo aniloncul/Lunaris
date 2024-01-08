@@ -110,11 +110,21 @@ struct StarsignView: View {
                 .shadow(color: .white, radius: 10, x: 0, y: 0)
 
             Spacer()
+            
             Text(starsign.rawValue.capitalized)
                 .font(.custom("GillSans", size: 45))
                 .frame(maxWidth: .infinity)
                 .padding(.bottom)
                 .shadow(color: .white, radius: 5, x: 0, y: 0)
+            
+            ScrollView {
+                VStack{
+                    Text("""
+                         lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem.  ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat
+                         """)
+                        .padding(12)
+                }
+            }
             #warning("add starsign dates here")
         }
     }

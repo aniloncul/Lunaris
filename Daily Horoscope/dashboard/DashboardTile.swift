@@ -8,22 +8,53 @@
 import SwiftUI
 
 struct DashboardTile: View {
+    
+    @State private var width = UIScreen.main.bounds.width
 
     let title: String
     let systemName: String
 
     var body: some View {
-        VStack(spacing: 20) {
+        HStack(spacing: 20) {
             Image(systemName: systemName)
-                .padding(.horizontal)
-                .font(.largeTitle)
-            Text(title)
-                .padding(.horizontal)
-                .frame(maxWidth: .infinity)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 80, height: 80)
+                
+                
+            
+            
+            VStack(alignment: .leading) {
+                Text(title)
+                    .font(Font.custom("Montserrat", size: 24))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.white)
+                HStack {
+                    Text("Get Detail")
+                    .font(
+                    Font.custom("Montserrat", size: 16)
+                    .weight(.bold)
+                    )
+                    .multilineTextAlignment(.center)
+                .foregroundColor(.white)
+                    Image(systemName: "arrow.forward")
+                        .resizable()
+                    .frame(width: 16, height: 16)
+                    
+                }
+            }
         }
-        .padding()
-        .background(RoundedRectangle(cornerRadius: 15).visualEffect({ effect, proxy in
+        .frame(width: width - 48)
+        
+        .background(RoundedRectangle(cornerRadius: 15)
+            
+            .visualEffect({ effect, proxy in
             effect.blur(radius: 0.5).opacity(0.2)
-        }))
+            }))
     }
+        
+}
+
+#Preview {
+    DashboardTile(title: "Daily Horoscope", systemName: "sparkles")
 }
