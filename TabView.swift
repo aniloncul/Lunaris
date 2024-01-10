@@ -21,7 +21,7 @@ struct ContentView: View {
             ProfileView()
                 .tabItem {
                     Image(systemName: "person.fill")
-                    Text("Second Tab")
+                    Text("Birth Chart")
                 }
             
             // Add more tabs as needed

@@ -12,23 +12,32 @@ import SwiftData
 struct Daily_HoroscopeApp: App {
     var body: some Scene {
         WindowGroup {
-            TabView {
-                DashboardView()
-                    .tabItem {
-                        Image(systemName: "house.fill")
-                        Text("Dashboard")
-                    }
-                
-                // Add more tabs with different views
-                // Example:
-                ProfileView()
-                    .tabItem {
-                        Image(systemName: "person.fill")
-                        Text("Second Tab")
-                    }
+            NavigationView {
+                LandingView()
             }
         }
     }
 }
 
+    
+struct TabViewPage: View {
+    var body: some View {
+        TabView {
+            DashboardView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Dashboard")
+                }
+            
+            // Add more tabs with different views
+            // Example:
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Birth Chart")
+                }
+        }
+        .navigationBarBackButtonHidden(true)
+    }
+}
 

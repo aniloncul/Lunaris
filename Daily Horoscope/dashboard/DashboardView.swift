@@ -85,31 +85,6 @@ struct DashboardView: View {
            
             .toolbar {
                 
-                ToolbarItem(placement: .topBarTrailing) {
-                    HStack {
-                        Button {
-                            showOnboarding = true
-                        } label: {
-                            Image(systemName: "bell.circle.fill")
-                                .resizable()
-                                .frame(width:36, height:36)
-                        }
-                        Spacer()
-                            .frame(width:0
-                            )
-                    }
-                }
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showOnboarding = true
-                    } label: {
-                        Image(systemName: "gearshape.circle.fill")
-                            .resizable()
-                            .frame(width:36, height:36)
-                    }
-                }
-                
                 ToolbarItem(placement: .topBarLeading) {
                     HStack {
                         Button {
