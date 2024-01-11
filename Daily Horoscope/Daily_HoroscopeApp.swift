@@ -21,6 +21,8 @@ struct Daily_HoroscopeApp: App {
 
     
 struct TabViewPage: View {
+    @State private var isPremium: Bool = false
+    
     var body: some View {
         TabView {
             DashboardView()
@@ -28,10 +30,23 @@ struct TabViewPage: View {
                     Image(systemName: "house.fill")
                     Text("Dashboard")
                 }
+            if isPremium {
+                            StarsignInfoView()
+                                .tabItem {
+                                    Image(systemName: "star.fill")
+                                    Text("Birth Chart")
+                                }
+                        } else {
+                            PremiumHoroscopeView( isPremium: $isPremium)
+                                .tabItem {
+                                    Image(systemName: "star.fill")
+                                    Text("Premium Horoscope")
+                                }
+                        }
             
             // Add more tabs with different views
             // Example:
-            ProfileView()
+            ProfileView(isPremium: isPremium)
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Birth Chart")

@@ -1,33 +1,34 @@
+//
+//  DailyHoroscopeView.swift
+//  Lunaris
+//
+//  Created by Anıl Öncül on 11.01.2024.
+//
+
 import SwiftUI
 import StoreKit
 
-struct ProfileView: View {
+public struct PremiumHoroscopeView: View {
     @AppStorage("starsign") var starsign: Starsign?
-    @State var isPremium: Bool 
+    @State var showPremium: Bool = false
+    @Binding var isPremium: Bool
     @State var showPaywall: Bool = false
     @State var showStarsignInfo: Bool = false
     @State var isBirthChartPaid: Bool = false
     @State var showBirthChart: Bool = false
     
-    var body: some View {
+    public var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
                     VStack {
                         
                         VStack(alignment: .leading, spacing: 16) {
-//                            Text("Alexis")
-//                                .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
-//                                .multilineTextAlignment(.leading)
-//                                .font(
-//                                    .system(size: 40,
-//                                            weight: .thin
-//                                           )
-//                                )
+                            
                             Spacer()
                                 .frame(height: 64)
                             
-                            Text(isBirthChartPaid ? "You may find your personalized Birth Chart Analysis below." : "In order to see your personalized Birth Chart Analysis you should pay a single time payment.")
+                            Text(isPremium ? "You are on premium plan." : "You are on basic plan. In order to see daily horoscope please get the premium plan.")
                                 .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
                                 .multilineTextAlignment(.leading)
                                 .font(
@@ -35,34 +36,31 @@ struct ProfileView: View {
                                             weight: .regular
                                            )
                                 )
+                        }
+                            
+                            
                             
                             Spacer()
-                                .frame(height: 2)
+                                .frame(height: 48)
                             
                             if !isBirthChartPaid {
                                 Button(action: {
-                                    showPaywall = true
+                                    showPremium = true
                                     
                                 }, label: {
-                                    DashboardTile(title: "Buy Birth Chart Analysis", systemName: "sparkles")
+                                    DashboardTile(title: "Get Premium Plan", systemName: "sparkles")
                                 })
                                 .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
                             } else {
-                                Button(action: {
-                                    
-                                    showBirthChart = true
-                                }, label: {
-                                    DashboardTile(title: "See Your Birth Chart Analysis", systemName: "sparkles")
-                                })
-                                .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+                                
                             }
                             
-                        }
+                        
                         
                         Spacer()
                             .frame(height: 32)
                         
-                        
+                     
                         
                     }
                 }
@@ -91,26 +89,12 @@ struct ProfileView: View {
                     .resizable()
                     .scaledToFill()
             )
-            
-            .sheet(isPresented: $showPaywall) {
-                PayPalPaymentView(isBirthChartPaid: $isBirthChartPaid)
+            .sheet(isPresented: $showPremium) {
+                PremiumPayWall(isPremium: $isPremium)
             }
-            .sheet(isPresented: $showBirthChart) {
-                BirthChartView()
+         
             }
         }
-        
     }
-}
-    
-//    struct ProfileView_Previews: PreviewProvider {
-//        @State static var isBirthChartPaid: Bool = false
-//        static var previews: some View {
-//            
-//            NavigationView {
-//                ProfileView(isBirthChartPaid: isBirthChartPaid)
-//                    .navigationTitle("Profile")
-//            }
-//        }
-//    }
-//}
+
+

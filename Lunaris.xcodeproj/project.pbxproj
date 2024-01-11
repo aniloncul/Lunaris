@@ -35,7 +35,10 @@
 		8BA3A9C02A4B142300E82987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BA3A9BE2A4B142300E82987 /* Assets.xcassets */; };
 		D578C37D2B4A47900077939F /* DashboardNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578C37C2B4A47900077939F /* DashboardNewsView.swift */; };
 		D578C37F2B4A61F70077939F /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578C37E2B4A61F70077939F /* TabView.swift */; };
-		D578C3832B4A630D0077939F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578C3822B4A630D0077939F /* ProfileView.swift */; };
+		D578C3832B4A630D0077939F /* BirthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578C3822B4A630D0077939F /* BirthChartView.swift */; };
+		D57A86632B4F126D00968E90 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A86622B4F126D00968E90 /* ProfileView.swift */; };
+		D57A86652B4F70E500968E90 /* PremiumHoroscopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A86642B4F70E500968E90 /* PremiumHoroscopeView.swift */; };
+		D57A86672B4F789D00968E90 /* PremiumPayWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A86662B4F789D00968E90 /* PremiumPayWall.swift */; };
 		D5AD0ACB2B4ACED40060D782 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD0ACA2B4ACED40060D782 /* LaunchScreenView.swift */; };
 		D5AD0ACE2B4B68960060D782 /* PlanetsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD0ACD2B4B68960060D782 /* PlanetsTable.swift */; };
 		D5AD0AD02B4B73A50060D782 /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD0ACF2B4B73A50060D782 /* AnalysisView.swift */; };
@@ -73,7 +76,10 @@
 		8BA3A9BE2A4B142300E82987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D578C37C2B4A47900077939F /* DashboardNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNewsView.swift; sourceTree = "<group>"; };
 		D578C37E2B4A61F70077939F /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
-		D578C3822B4A630D0077939F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D578C3822B4A630D0077939F /* BirthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthChartView.swift; sourceTree = "<group>"; };
+		D57A86622B4F126D00968E90 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D57A86642B4F70E500968E90 /* PremiumHoroscopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumHoroscopeView.swift; sourceTree = "<group>"; };
+		D57A86662B4F789D00968E90 /* PremiumPayWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPayWall.swift; sourceTree = "<group>"; };
 		D5AD0ACA2B4ACED40060D782 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		D5AD0ACD2B4B68960060D782 /* PlanetsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsTable.swift; sourceTree = "<group>"; };
 		D5AD0ACF2B4B73A50060D782 /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
@@ -113,12 +119,15 @@
 		8B6BF1242A4061F900F6E282 = {
 			isa = PBXGroup;
 			children = (
+				D57A86662B4F789D00968E90 /* PremiumPayWall.swift */,
+				D57A86622B4F126D00968E90 /* ProfileView.swift */,
+				D57A86642B4F70E500968E90 /* PremiumHoroscopeView.swift */,
 				18E2D19E2B4E11E900D64E32 /* PaymentPageView.swift */,
 				18E2D19C2B4E0E7500D64E32 /* RegisterPageView.swift */,
 				18E2D1982B4E038400D64E32 /* LoginPageView.swift */,
 				18E2D1962B4C77AC00D64E32 /* LandingView.swift */,
 				D5AD0ACA2B4ACED40060D782 /* LaunchScreenView.swift */,
-				D578C3822B4A630D0077939F /* ProfileView.swift */,
+				D578C3822B4A630D0077939F /* BirthChartView.swift */,
 				D578C37E2B4A61F70077939F /* TabView.swift */,
 				8B6BF12F2A4061F900F6E282 /* Daily Horoscope */,
 				8B6BF12E2A4061F900F6E282 /* Products */,
@@ -305,15 +314,18 @@
 				8B8AFAC82A97B3B9005F27C9 /* DashboardTile.swift in Sources */,
 				8BA3A9B72A4AEF4400E82987 /* Starsign.swift in Sources */,
 				8B82F0CF2A5430C100F23BD3 /* ScaleButtonStyle.swift in Sources */,
+				D57A86652B4F70E500968E90 /* PremiumHoroscopeView.swift in Sources */,
 				18E2D1972B4C77AC00D64E32 /* LandingView.swift in Sources */,
 				18E2D1992B4E038400D64E32 /* LoginPageView.swift in Sources */,
+				D57A86672B4F789D00968E90 /* PremiumPayWall.swift in Sources */,
 				8B13E0472A97CFB100673F37 /* GasCloudParticleScene.swift in Sources */,
 				8B6BF1312A4061F900F6E282 /* Daily_HoroscopeApp.swift in Sources */,
 				18E2D19F2B4E11E900D64E32 /* PaymentPageView.swift in Sources */,
-				D578C3832B4A630D0077939F /* ProfileView.swift in Sources */,
+				D578C3832B4A630D0077939F /* BirthChartView.swift in Sources */,
 				D578C37D2B4A47900077939F /* DashboardNewsView.swift in Sources */,
 				8B6BF1452A40660500F6E282 /* DailyHoroscopeView.swift in Sources */,
 				D5AD0ACE2B4B68960060D782 /* PlanetsTable.swift in Sources */,
+				D57A86632B4F126D00968E90 /* ProfileView.swift in Sources */,
 				8B82F0D12A5430DA00F23BD3 /* GPTTone.swift in Sources */,
 				8B5F2C132A5C242400C7F8D9 /* DashboardRow.swift in Sources */,
 				8BA3A9B52A4AEC8F00E82987 /* OnboardingView.swift in Sources */,

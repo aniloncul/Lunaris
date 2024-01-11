@@ -52,8 +52,9 @@ struct RegisterPageView: View {
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
 
-                NavigationLink(destination: PayPalPaymentView()) {
-                                    Text("Payment")
+               
+                NavigationLink(destination: TabViewPage()) {
+                                    Text("Register")
                                         .font(.headline)
                                         .foregroundColor(.white)
                                         .padding()
@@ -61,6 +62,8 @@ struct RegisterPageView: View {
                                         .background(Color.purple)
                                         .cornerRadius(15.0)
                                 }
+                
+              
             }
             .padding()
         }

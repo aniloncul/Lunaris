@@ -47,6 +47,8 @@ struct DashboardTile: View {
         .frame(width: width - 48)
         
         .background(RoundedRectangle(cornerRadius: 15)
+            .fill(Color.purple)
+            
             
             .visualEffect({ effect, proxy in
             effect.blur(radius: 0.5).opacity(0.2)

@@ -1,14 +1,14 @@
 //
-//  PaymentPageView.swift
-//  Daily Horoscope
+//  PremiumPayWall.swift
+//  Lunaris
 //
-//  Created by Utku Urkun on 10.01.2024.
+//  Created by Anıl Öncül on 11.01.2024.
 //
 
 import SwiftUI
 
-struct PayPalPaymentView: View {
-    @Binding var isBirthChartPaid: Bool
+struct PremiumPayWall: View {
+    @Binding var isPremium: Bool
     @State private var isPaymentSuccessful = false
     @Environment(\.presentationMode) var presentationMode
 
@@ -28,7 +28,7 @@ struct PayPalPaymentView: View {
                 .font(.headline)
                 .padding(.bottom, 5)
 
-            Text("Pay €7.99 single time for Your Personalized Birth Chart Analysis")
+            Text("Just €9.99 per month for Daily Horoscopes")
                 .font(.title)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
@@ -41,7 +41,7 @@ struct PayPalPaymentView: View {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                                 presentationMode.wrappedValue.dismiss()
                                 
-                                isBirthChartPaid = true
+                                isPremium = true
                             }
                         })  {
                 Text("Pay with PayPal")
@@ -65,10 +65,6 @@ struct PayPalPaymentView: View {
     }
 }
 
-struct PayPalPaymentView_Previews: PreviewProvider {
-    @State static var isBirthChartPaid: Bool = false
-
-    static var previews: some View {
-        PayPalPaymentView(isBirthChartPaid: $isBirthChartPaid)
-    }
-}
+//#Preview {
+//    PremiumPayWall()
+//}

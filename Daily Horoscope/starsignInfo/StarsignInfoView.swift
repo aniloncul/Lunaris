@@ -93,10 +93,17 @@ struct OffsetKey: PreferenceKey {
 }
 
 struct StarsignView: View {
+    
+    @State private var currentText: String = ""
+    @State var currentDate: Date = Date()
+
 
     let starsign: Starsign
+    
+    
 
     var body: some View {
+        
         VStack {
             Spacer()
             #warning("Add Starsign Symbol here")
@@ -108,25 +115,44 @@ struct StarsignView: View {
                 .padding()
                 .shadow(color: .white, radius: 20, x: 0, y: 0)
                 .shadow(color: .white, radius: 10, x: 0, y: 0)
+        
 
             Spacer()
-            
-            Text(starsign.rawValue.capitalized)
-                .font(.custom("GillSans", size: 45))
-                .frame(maxWidth: .infinity)
-                .padding(.bottom)
-                .shadow(color: .white, radius: 5, x: 0, y: 0)
-            
-            ScrollView {
-                VStack{
-                    Text("""
-                         lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem.  ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat lorem ipsum dolor sit amat
-                         """)
-                        .padding(12)
+            VStack(spacing: 4) {
+                
+                Text(starsign.rawValue.capitalized)
+                    .font(.custom("GillSans", size: 45))
+                    .frame(maxWidth: .infinity)
+                    .padding(.bottom)
+                    .shadow(color: .white, radius: 5, x: 0, y: 0)
+                
+                
+                Text(formatDate(currentDate))
+                    .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
+                    .multilineTextAlignment(.leading)
+                    .font(
+                        .system(size: 18,
+                                weight: .thin
+                               )
+                    )
+                
+                ScrollView {
+                    VStack{
+                        Text(starsign.horoscopeText)
+                            .padding(12)
+                        
+                    }
                 }
+#warning("add starsign dates here")
             }
-            #warning("add starsign dates here")
+            
         }
+      
+    }
+    private func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy" // You can customize the format as needed
+        return formatter.string(from: date)
     }
 }
 

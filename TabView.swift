@@ -17,12 +17,13 @@ struct ContentView: View {
                     Image(systemName: "house.fill")
                 }
             
-            // Tab 2
-            ProfileView()
+            StarsignInfoView()
                 .tabItem {
-                    Image(systemName: "person.fill")
+                    Image(systemName: "star.fill")
                     Text("Birth Chart")
                 }
+            // Tab 2
+           
             
             // Add more tabs as needed
         }
